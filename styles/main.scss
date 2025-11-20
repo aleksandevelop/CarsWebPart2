@@ -1,0 +1,20 @@
+@use 'normalize';
+@use 'global';
+@use 'utils';
+@use 'variables';
+
+
+
+@use 'blocks/header';
+@use 'blocks/counter';
+@use 'blocks/preview';
+@use 'blocks/advert';
+@use 'blocks/section';
+@use 'blocks/footer';
+@use 'blocks/search';
+@use 'blocks/choose';
+@use 'blocks/auto';
+@use 'blocks/recommend';
+@use 'blocks/services';
+@use 'blocks/news';
+@use 'blocks/forum';

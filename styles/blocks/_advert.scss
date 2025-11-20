@@ -1,0 +1,33 @@
+@use '../helpers' as *;
+.advert{
+  background: transparent;
+  text-transform: uppercase;
+  color: var(--color-light);
+
+  &__title{
+    font-size: fluid(22, 15);
+  }
+  &__desc{
+    font-size: fluid(15, 10);
+    margin-bottom: 10px;
+  }
+  &__button{
+    color: var(--color-light);
+    border: none ;
+    border-radius: 20px;
+    padding: 5px 25px;
+    text-transform: uppercase;
+    font-size: fluid(17, 10);
+    background-color: #f5671f;
+
+
+    &:hover{
+      background-color: #ad4814 ;
+    }
+
+    @include mobile{
+      padding-inline: 15px;
+    }
+  }
+
+}

@@ -1,0 +1,85 @@
+@use '../helpers' as *;
+.search{
+
+
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &-title {
+    color: var(--color-dark);
+    font-size: 18px;
+    font-weight: bold;
+
+  }
+
+  &-counter {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    @include tablet{
+      justify-content: normal;
+
+    }
+    @include mobile {
+      gap: 3px;
+      padding-top: 10px;
+      justify-content: space-between;
+
+    }
+  }
+
+  &-item {
+  }
+
+  &-mark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: 1px solid var(--color-dark);
+    padding: 0 10px;
+
+    @include mobile {
+      padding: 0 10px;
+    }
+  }
+  &-desc{
+    font-size: 12px;
+  }
+
+  &-button {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    border: none;
+    padding: 5px 50px;
+    align-self: center;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #AB8E30FF;
+    }
+
+    @include mobile {
+      padding: 0 25px;
+    }
+  }
+
+}

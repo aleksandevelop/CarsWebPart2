@@ -1,0 +1,162 @@
+@use '../helpers' as *;
+
+.section {
+  padding-block: 15px;
+  color: var(--color-gray);
+
+  @include tablet {
+    padding-inline: 20px;
+  }
+  @include mobile-s{
+    padding-inline: 10px;
+  }
+
+
+  &__body {
+
+    &-inner {
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 20px;
+    padding: 20px ;
+    border: 1px solid var(--color-gray);
+
+
+    &-big {
+      grid-template-columns: 1fr;
+    }
+
+    @include tablet {
+      border: none;
+      margin: 0;
+      padding: 0;
+      grid-template-columns: 1fr;
+    }
+    @include mobile {
+      border: none;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &-news{
+      gap: 5px;
+      align-items: end;
+    }
+  }
+  &__top {
+    padding: 12px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 100%
+    ),
+    var(--color-dark);
+    width: 100%;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-light);
+    transition: all 0.5s ease;
+    font-size: 13px;
+
+    &:hover {
+    }
+    @include mobile {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    &--yellow {
+      color: var(--color-light);
+      background-color: var(--color-accent);
+
+      &:hover {
+        background-color: #AB8E30FF;
+      }
+    }
+
+    &--gray {
+      color: var(--color-gray);
+      background-color: var(--color-gray-alt);
+      font-weight: 600;
+    }
+
+
+    &-link {
+      background: transparent;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      text-decoration: none;
+      align-items: center;
+      font-size: fluid(20, 15);
+      transition: all 0.5s ease;
+
+
+
+      @include mobile {
+        padding: 0 10px;
+      }
+
+
+    }
+
+    &-desc {
+      position: relative;
+      z-index: 2;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    &-nav {
+      display: flex;
+      white-space: nowrap;
+      gap: 5px;
+      color: var(--color-light);
+      &-link {
+        text-decoration: none;
+      }
+
+      @include mobile{
+      }
+    }
+
+    &-between {
+    }
+
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 25px;
+    padding: 15px;
+
+    outline: 1px solid var(--color-gray-alt);
+
+    &:last-child {
+      border: none;
+    }
+
+    @include mobile {
+      padding: 5px;
+    }
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    height: 100%;
+  }
+
+}

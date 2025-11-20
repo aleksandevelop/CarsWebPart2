@@ -1,0 +1,65 @@
+@use "../helpers" as *;
+
+.news {
+  padding: 0;
+  border: none;
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    border:var(--border);
+    color: var(--color-dark);
+    text-decoration: none;
+
+    @include tablet {
+      flex-direction: column;
+    }
+    @include mobile {
+      flex-direction: row;
+      padding: 5px;
+    }
+
+  }
+
+  &-img {
+    @include mobile {
+      max-width: 150px;
+    }
+  }
+
+  &-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-dark);
+
+  }
+
+  &-date {
+    color: var(--color-gray);
+
+    &:hover {
+      color: var(--color-gray);
+    }
+
+  }
+
+  &-desc {
+    overflow: hidden ;
+    font-size: 13px;
+  }
+
+  &-img {
+
+  }
+}

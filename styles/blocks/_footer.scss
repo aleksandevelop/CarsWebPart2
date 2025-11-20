@@ -1,0 +1,27 @@
+@use '../helpers' as *;
+
+.footer{
+  width: 100%;
+  padding-top: 16px;
+
+  @include mobile{
+    padding: 0;
+  }
+  &__top{
+    min-height: 20px;
+    background-color: var(--color-accent);
+  }
+  &__main{
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
+
+  &__nav{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px;
+    align-items: center;
+  }
+
+}

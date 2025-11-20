@@ -1,0 +1,68 @@
+@use "../helpers" as *;
+.services {
+  padding: 0;
+
+  &-list {
+    display: flex;
+    overflow: auto;
+
+    gap: 10px;
+    height: 100%;
+    @include tablet{
+      justify-content: space-between;
+    }
+    @include mobile{
+    flex-direction: column;
+    }
+  }
+
+  &-item {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    min-height: 300px;
+
+    &:not(:last-child){
+    border-right: var(--border);
+  }
+    @include tablet{
+      border: var(--border);
+      min-height: 150px;
+
+
+    }
+    @include mobile {
+      padding: 5px;
+      height: 100%;
+      min-height: 50px;
+    }
+  }
+
+  &-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  &-time{
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+
+}
+.service {
+
+     &-title {
+       font-size: 19px;
+       color: var(--color-dark);
+       font-weight: bold;
+     }
+
+     &-teg {
+       font-size: 16px;
+       font-weight: 600;
+       color: var(--color-accent);
+     }
+   }

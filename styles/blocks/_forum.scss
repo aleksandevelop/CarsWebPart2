@@ -1,0 +1,61 @@
+
+@use '../helpers' as *;
+
+.forum{
+  padding-block: 20px;
+  @include tablet {
+    margin-inline: 0;
+    padding: 0;
+
+  }
+  &-border{
+    padding: 20px;
+    border-inline: var(--border);
+
+
+    @include mobile{
+      border-inline: none;
+    }
+  }
+
+  &-inner {
+    display: flex;
+    padding: 10px 20px;
+    border: var(--border);
+    gap: 50px;
+    overflow: auto;
+    align-items: center;
+    font-size: 12px;
+
+    @include mobile {
+      padding: 5px 10px;
+    }
+  }
+
+  &-title {
+    font-size: 16px;
+    color: var(--color-dark);
+  }
+
+  &-nav {
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  &-item {
+    align-self: center;
+  }
+
+  &-link {
+    color: var(--color-accent);
+    letter-spacing: 0.5px;
+
+    &:hover {
+      color: var(--color-dark);
+    }
+  }
+}

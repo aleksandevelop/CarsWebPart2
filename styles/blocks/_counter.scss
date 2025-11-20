@@ -1,0 +1,45 @@
+@use '../helpers' as *;
+.counter{
+  height: 40px;
+  z-index: 10;
+  display: flex;
+
+  @include mobile{
+    display: none;
+  }
+
+  .count{
+    width: 24px;
+    height: 40px;
+    &-zero{
+      background: url("../images/header/count.png") 0px 0px;
+    }
+    &-one{
+       background: url("../images/header/count.png") -24px 0px;
+    }
+    &-two{
+      background: url("../images/header/count.png") -48px 0px;
+    }
+    &-three{
+      background: url("../images/header/count.png") -72px 0px;
+    }
+    &-four{
+      background: url("../images/header/count.png") -96px 0px;
+    }
+    &-five{
+      background: url("../images/header/count.png") -120px 0px;
+    }
+    &-six{
+      background: url("../images/header/count.png") -144px 0px;
+    }
+    &-seven{
+      background: url("../images/header/count.png") -168px 0px;
+    }
+    &-eight{
+      background: url("../images/header/count.png") -192px 0px;
+    }
+    &-nine{
+      background: url("../images/header/count.png") -216px 0px;
+    }
+  }
+}

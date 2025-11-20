@@ -1,0 +1,22 @@
+@use 'helpers' as *;
+
+:root {
+  --color-light: #fff;
+  --color-dark: #141414;
+  --color-gray: #a6a6a6;
+  --color-gray-alt: #eaebec;
+
+  --color-accent: #f2c943;
+  --color-red: #ff5500;
+
+//  --gradient: ;
+
+  --border: #{rem(1)} solid var(--color-gray-alt);
+
+  --container-width: #{rem(980)};
+  --container-padding-x: #{rem(16)};
+
+  --transition-duration: 0.2s;
+
+
+}
