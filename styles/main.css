@@ -793,78 +793,149 @@ button[aria-label]::before {
   align-items: center;
 }
 
-.search-info {
+.tab-panel {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-@media (width <= 47.99875rem) {
-  .search-info {
-    flex-direction: column;
-  }
-}
-.search-title {
-  color: var(--color-dark);
-  font-size: 18px;
-  font-weight: bold;
-}
-@media (width <= 63.99875rem) {
-  .search-counter {
-    display: none;
-  }
-}
-.search-link {
-  text-decoration: none;
-  font-size: 15px;
-}
-.search-list {
-  display: flex;
-  flex-wrap: wrap;
   gap: 10px;
-  justify-content: space-between;
 }
-@media (width <= 63.99875rem) {
-  .search-list {
-    justify-content: normal;
-  }
+
+.panel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
-@media (width <= 47.99875rem) {
-  .search-list {
-    gap: 3px;
-    padding-top: 10px;
-    justify-content: space-between;
-  }
+
+.panel-link {
+  display: flex;
+  gap: 5px;
+  color: var(--color-dark);
+  text-decoration: none;
 }
-.search-mark {
+.panel-link__num {
+  color: var(--color-gray);
+}
+
+.panel__images-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.panel__images-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  outline: 1px solid var(--color-dark);
-  padding: 0 10px;
 }
-@media (width <= 47.99875rem) {
-  .search-mark {
-    padding: 0 10px;
-  }
+
+.tabs {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.search-desc {
+
+.tab-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: end;
+}
+
+.tab-text {
+  align-self: center;
+  white-space: nowrap;
+}
+
+.tab-button {
   font-size: 12px;
-}
-.search-button {
+  padding: 10px 20px;
+  white-space: nowrap;
+  border: none;
   background-color: var(--color-accent);
   color: var(--color-light);
-  border: none;
-  padding: 5px 50px;
-  align-self: center;
-  text-decoration: none;
+  border-radius: 5px;
 }
-.search-button:hover {
-  background-color: #ab8e30;
+
+/* Скрываем настоящие радиокнопки */
+.tab-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-@media (width <= 47.99875rem) {
-  .search-button {
-    padding: 0 25px;
-  }
+
+/* Заголовки табов */
+.tab-headers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-tabs,
+.second-tabs {
+  display: flex;
+}
+
+.tab-header {
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  border: var(--border);
+  background-color: transparent;
+  color: #c7c5c5;
+}
+
+.tab-header:hover {
+  color: var(--color-gray);
+  background: var(--color-gray-alt);
+}
+
+/* Контейнер для контента */
+.tab-panelss {
+  position: relative;
+  padding: 0;
+}
+
+.tab-panels {
+  display: none;
+}
+
+/* Показываем нужную группу панелей (Марки/Помощник) */
+#tab-panels1:checked ~ .tab-panelss #tab-panels11,
+#tab-panels2:checked ~ .tab-panelss #tab-panels22 {
+  display: block;
+}
+
+/* Панели контента */
+.tab-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* КРИТИЧЕСКИ ВАЖНО: Правила показа/скрытия */
+#tab1:checked ~ .tab-panelss #panel1,
+#tab2:checked ~ .tab-panelss #panel2,
+#tab3:checked ~ .tab-panelss #panel3 {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+  position: relative;
+}
+
+/* Подсветка активного таба */
+#tab1:checked ~ .tab-headers [for=tab1],
+#tab2:checked ~ .tab-headers [for=tab2],
+#tab3:checked ~ .tab-headers [for=tab3],
+#tab-panels1:checked ~ .tab-headers [for=tab-panels1],
+#tab-panels2:checked ~ .tab-headers [for=tab-panels2] {
+  background: var(--color-gray-alt);
+  color: var(--color-gray);
 }
 
 .choose {
@@ -1046,7 +1117,14 @@ input:checked + .choose-wagon {
   white-space: nowrap;
   color: var(--color-accent);
 }
+.auto-name {
+  font-weight: bold;
+  color: var(--color-dark);
+}
 .auto-span {
+  color: var(--color-gray);
+}
+.auto-span, .auto-name {
   display: block;
   white-space: nowrap;
 }
@@ -1056,7 +1134,7 @@ input:checked + .choose-wagon {
 .recommend {
   margin: 0 !important;
   padding: 0;
-  max-height: 440px;
+  max-height: 350px;
   height: 100%;
 }
 .recommend.swiper-vertical2 {
@@ -1153,6 +1231,7 @@ input:checked + .choose-wagon {
   display: flex;
   flex-direction: column;
   text-decoration: none;
+  gap: 10px;
 }
 .services-time {
   font-size: 13px;
@@ -1165,6 +1244,7 @@ input:checked + .choose-wagon {
   font-weight: bold;
 }
 .service-teg {
+  margin-top: 20px;
   font-size: 16px;
   font-weight: 600;
   color: var(--color-accent);

@@ -1,7 +1,7 @@
 const verticalSwiper = new Swiper('.swiper-vertical', {
   // Уникальные настройки для вертикального слайдера
   direction: 'vertical',
-  slidesPerView: 5, // показывать 5 слайдов
+  slidesPerView: 4, // показывать 5 слайдов
   spaceBetween: 0,
   loop: true,
   speed: 800,

@@ -37,8 +37,16 @@
     white-space: nowrap;
     color: var(--color-accent);
   }
+  &-name{
+    font-weight: bold;
+    color: var(--color-dark);
+  }
+  &-span{
 
-  &-span {
+    color: var(--color-gray);
+  }
+  &-span,
+  &-name{
     display: block;
     white-space: nowrap;
   }

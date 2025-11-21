@@ -1,85 +1,144 @@
 @use '../helpers' as *;
-.search{
+.tab-panel{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.panel-list{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.panel-link{
+  display: flex;
+  gap: 5px;
+  color: var(--color-dark);
+  text-decoration: none;
 
-
-  &-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @include mobile {
-      flex-direction: column;
-    }
+  &__num{
+    color: var(--color-gray);
   }
-
-  &-title {
-    color: var(--color-dark);
-    font-size: 18px;
-    font-weight: bold;
-
+}
+.panel__images-list{
+    display: grid;
+  grid-template-columns: repeat(5, 1fr);
   }
+.panel__images-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  &-counter {
-    @include tablet {
-      display: none;
-    }
-  }
+.tabs {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tab-bottom{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: end;
+}
+.tab-counter{
+}
+.tab-text{
+  align-self: center;
+  white-space: nowrap;
+}
 
-  &-link {
-    text-decoration: none;
-    font-size: 15px;
-  }
+.tab-button{
+  font-size: 12px;
+  padding: 10px 20px;
+  white-space: nowrap;
+  border: none;
+  background-color: var(--color-accent);
+  color: var(--color-light);
+  border-radius: 5px;
+}
+/* Скрываем настоящие радиокнопки */
+.tab-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
-  &-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
-    @include tablet{
-      justify-content: normal;
+/* Заголовки табов */
+.tab-headers {
+  display: flex;
+  justify-content: space-between;
+}
 
-    }
-    @include mobile {
-      gap: 3px;
-      padding-top: 10px;
-      justify-content: space-between;
+.first-tabs,
+.second-tabs {
+  display: flex;
+}
 
-    }
-  }
+.tab-header {
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  border: var(--border);
+  background-color: transparent;
+  color: #c7c5c5;
+}
 
-  &-item {
-  }
+.tab-header:hover {
+  color: var(--color-gray);
+  background: var(--color-gray-alt);
+}
 
-  &-mark {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    outline: 1px solid var(--color-dark);
-    padding: 0 10px;
+/* Контейнер для контента */
 
-    @include mobile {
-      padding: 0 10px;
-    }
-  }
-  &-desc{
-    font-size: 12px;
-  }
+.tab-panelss {
+  position: relative;
+  padding: 0;
+}
 
-  &-button {
-    background-color: var(--color-accent);
-    color: var(--color-light);
-    border: none;
-    padding: 5px 50px;
-    align-self: center;
-    text-decoration: none;
+.tab-panels {
+  display: none;
+}
 
-    &:hover {
-      background-color: #AB8E30FF;
-    }
+/* Показываем нужную группу панелей (Марки/Помощник) */
+#tab-panels1:checked ~ .tab-panelss #tab-panels11,
+#tab-panels2:checked ~ .tab-panelss #tab-panels22 {
+  display: block;
+}
 
-    @include mobile {
-      padding: 0 25px;
-    }
-  }
+/* Панели контента */
 
+.tab-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* КРИТИЧЕСКИ ВАЖНО: Правила показа/скрытия */
+#tab1:checked ~ .tab-panelss #panel1,
+#tab2:checked ~ .tab-panelss #panel2,
+#tab3:checked ~ .tab-panelss #panel3 {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+  position: relative;
+}
+
+
+/* Подсветка активного таба */
+#tab1:checked ~ .tab-headers [for="tab1"],
+#tab2:checked ~ .tab-headers [for="tab2"],
+#tab3:checked ~ .tab-headers [for="tab3"],
+#tab-panels1:checked ~ .tab-headers [for="tab-panels1"],
+#tab-panels2:checked ~ .tab-headers [for="tab-panels2"] {
+  background:var(--color-gray-alt);
+  color: var(--color-gray);
 }
