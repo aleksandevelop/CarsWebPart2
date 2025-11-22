@@ -1,33 +1,33 @@
 @use "../helpers" as *;
+
 .services {
   padding: 0;
 
   &-list {
     display: flex;
     overflow: auto;
-
-    gap: 10px;
     height: 100%;
-    @include tablet{
+    @include tablet {
       justify-content: space-between;
     }
-    @include mobile{
-    flex-direction: column;
+    @include mobile {
+      flex-direction: column;
     }
   }
 
   &-item {
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 15px;
+    padding: 10px;
     min-height: 300px;
 
-    &:not(:last-child){
-    border-right: var(--border);
-  }
-    @include tablet{
+
+    &:not(:last-child) {
+      border-right: var(--border);
+    }
+
+    @include tablet {
       border: var(--border);
       min-height: 150px;
 
@@ -41,30 +41,38 @@
   }
 
   &-link {
+    color: var(--color-dark);
     display: flex;
     flex-direction: column;
     text-decoration: none;
     gap: 10px;
+
+
+
   }
-  &-time{
+
+  &-time {
     font-size: 13px;
     white-space: nowrap;
   }
 
 
 }
+
 .service {
 
-     &-title {
-       font-size: 19px;
-       color: var(--color-dark);
-       font-weight: bold;
-     }
+  &-title {
+    font-size: 19px;
+    font-weight: bold;
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
 
-     &-teg {
-        margin-top: 20px;
-       font-size: 16px;
-       font-weight: 600;
-       color: var(--color-accent);
-     }
-   }
+  &-teg {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+}

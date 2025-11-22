@@ -2,20 +2,12 @@
 @use '../helpers' as *;
 
 .forum{
-  padding-block: 20px;
   @include tablet {
     margin-inline: 0;
     padding: 0;
 
   }
   &-border{
-    padding: 20px;
-    border-inline: var(--border);
-
-
-    @include mobile{
-      border-inline: none;
-    }
   }
 
   &-inner {

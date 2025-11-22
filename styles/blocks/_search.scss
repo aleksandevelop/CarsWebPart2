@@ -1,4 +1,6 @@
 @use '../helpers' as *;
+.search{
+}
 .tab-panel{
   display: flex;
   justify-content: space-between;
@@ -44,6 +46,8 @@
 .tab-counter{
 }
 .tab-text{
+  font-size: 15px;
+  font-weight: bold;
   align-self: center;
   white-space: nowrap;
 }
@@ -56,6 +60,12 @@
   background-color: var(--color-accent);
   color: var(--color-light);
   border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover{
+    background-color: #AB8E30FF;
+  }
 }
 /* Скрываем настоящие радиокнопки */
 .tab-input {

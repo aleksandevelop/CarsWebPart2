@@ -19,9 +19,9 @@
   }
   &__list {
     display: grid;
-    grid-template-columns: 7fr 3fr;
-    gap: 20px;
-    padding: 20px ;
+    grid-template-columns: calc(70% - 7.5px) calc(30% - 7.5px);
+    gap: 15px;
+    padding: 15px ;
     border: 1px solid var(--color-gray);
 
 
@@ -42,7 +42,7 @@
   &__item {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
 
     &-news{
       gap: 5px;
@@ -63,16 +63,18 @@
     justify-content: space-between;
     align-items: center;
     color: var(--color-light);
-    transition: all 0.5s ease;
     font-size: 13px;
 
     &:hover {
+      color: var(--color-accent);
     }
     @include mobile {
       flex-direction: column;
       row-gap: 10px;
     }
-
+    &--dark{
+      color: var(--color-dark);
+    }
     &--yellow {
       color: var(--color-light);
       background-color: var(--color-accent);
@@ -98,7 +100,6 @@
       text-decoration: none;
       align-items: center;
       font-size: fluid(20, 15);
-      transition: all 0.5s ease;
 
 
 
@@ -114,6 +115,10 @@
       z-index: 2;
       font-weight: bold;
       font-size: 14px;
+
+      &--dark{
+        color: var(--color-dark);
+      }
     }
 
     &-nav {
@@ -140,6 +145,7 @@
     height: 100%;
     gap: 25px;
     padding: 15px;
+
 
     outline: 1px solid var(--color-gray-alt);
 

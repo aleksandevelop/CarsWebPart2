@@ -2,12 +2,9 @@
 .recommend {
   margin: 0 !important;
   padding: 0;
-  max-height: 350px;
+  max-height: 339px;
   height: 100%;
 
-  &.swiper-vertical2{
-    max-height: 300px;
-  }
   &-list {
     display: flex;
     flex-direction: column;
@@ -18,9 +15,10 @@
   }
 
   &-item {
-    padding: 12px;
-    border-bottom: var(--border);
-
+    display: flex;
+    border: var(--border);
+    padding: 10px;
+    align-content: center;
     @include tablet {
       padding: 5px;
     }

@@ -209,7 +209,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  color: var(--color-light);
+  color: var(--color-dark);
 }
 
 h1,
@@ -553,7 +553,7 @@ button[aria-label]::before {
   position: relative;
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 15px;
   width: 100%;
   height: 100%;
 }
@@ -579,7 +579,7 @@ button[aria-label]::before {
   padding-top: 5px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   width: 30%;
 }
 @media (width <= 47.99875rem) {
@@ -652,9 +652,9 @@ button[aria-label]::before {
 }
 .section__list {
   display: grid;
-  grid-template-columns: 7fr 3fr;
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: calc(70% - 7.5px) calc(30% - 7.5px);
+  gap: 15px;
+  padding: 15px;
   border: 1px solid var(--color-gray);
 }
 .section__list-big {
@@ -676,7 +676,7 @@ button[aria-label]::before {
 .section__item {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
 }
 .section__item-news {
   gap: 5px;
@@ -691,14 +691,19 @@ button[aria-label]::before {
   justify-content: space-between;
   align-items: center;
   color: var(--color-light);
-  transition: all 0.5s ease;
   font-size: 13px;
+}
+.section__top:hover {
+  color: var(--color-accent);
 }
 @media (width <= 47.99875rem) {
   .section__top {
     flex-direction: column;
     row-gap: 10px;
   }
+}
+.section__top--dark {
+  color: var(--color-dark);
 }
 .section__top--yellow {
   color: var(--color-light);
@@ -721,7 +726,6 @@ button[aria-label]::before {
   text-decoration: none;
   align-items: center;
   font-size: clamp(0.9375rem, 0.8578431373rem + 0.3267973856vw, 1.25rem);
-  transition: all 0.5s ease;
 }
 @media (width <= 47.99875rem) {
   .section__top-link {
@@ -733,6 +737,9 @@ button[aria-label]::before {
   z-index: 2;
   font-weight: bold;
   font-size: 14px;
+}
+.section__top-desc--dark {
+  color: var(--color-dark);
 }
 .section__top-nav {
   display: flex;
@@ -841,6 +848,8 @@ button[aria-label]::before {
 }
 
 .tab-text {
+  font-size: 15px;
+  font-weight: bold;
   align-self: center;
   white-space: nowrap;
 }
@@ -853,6 +862,11 @@ button[aria-label]::before {
   background-color: var(--color-accent);
   color: var(--color-light);
   border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.tab-button:hover {
+  background-color: #ab8e30;
 }
 
 /* Скрываем настоящие радиокнопки */
@@ -1083,6 +1097,10 @@ input:checked + .choose-wagon {
   background-position: -96px -100px;
 }
 
+.auto {
+  padding: 0;
+  outline: none;
+}
 .auto-list {
   display: grid;
   gap: 10px;
@@ -1101,6 +1119,10 @@ input:checked + .choose-wagon {
   text-decoration: none;
   border: var(--border);
   padding: 10px;
+  color: var(--color-dark);
+}
+.auto-link:hover {
+  color: var(--color-accent) !important;
 }
 .auto-title {
   color: inherit;
@@ -1119,7 +1141,9 @@ input:checked + .choose-wagon {
 }
 .auto-name {
   font-weight: bold;
-  color: var(--color-dark);
+}
+.auto-name:hover {
+  color: var(--color-accent);
 }
 .auto-span {
   color: var(--color-gray);
@@ -1131,14 +1155,12 @@ input:checked + .choose-wagon {
 .auto-img {
   width: 100%;
 }
+
 .recommend {
   margin: 0 !important;
   padding: 0;
-  max-height: 350px;
+  max-height: 339px;
   height: 100%;
-}
-.recommend.swiper-vertical2 {
-  max-height: 300px;
 }
 .recommend-list {
   display: flex;
@@ -1150,8 +1172,10 @@ input:checked + .choose-wagon {
   }
 }
 .recommend-item {
-  padding: 12px;
-  border-bottom: var(--border);
+  display: flex;
+  border: var(--border);
+  padding: 10px;
+  align-content: center;
 }
 @media (width <= 63.99875rem) {
   .recommend-item {
@@ -1191,7 +1215,6 @@ input:checked + .choose-wagon {
 .services-list {
   display: flex;
   overflow: auto;
-  gap: 10px;
   height: 100%;
 }
 @media (width <= 63.99875rem) {
@@ -1208,7 +1231,7 @@ input:checked + .choose-wagon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 15px;
+  padding: 10px;
   min-height: 300px;
 }
 .services-item:not(:last-child) {
@@ -1228,6 +1251,7 @@ input:checked + .choose-wagon {
   }
 }
 .services-link {
+  color: var(--color-dark);
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -1240,8 +1264,10 @@ input:checked + .choose-wagon {
 
 .service-title {
   font-size: 19px;
-  color: var(--color-dark);
   font-weight: bold;
+}
+.service-title:hover {
+  color: var(--color-accent);
 }
 .service-teg {
   margin-top: 20px;
@@ -1303,22 +1329,10 @@ input:checked + .choose-wagon {
   overflow: hidden;
   font-size: 13px;
 }
-.forum {
-  padding-block: 20px;
-}
 @media (width <= 63.99875rem) {
   .forum {
     margin-inline: 0;
     padding: 0;
-  }
-}
-.forum-border {
-  padding: 20px;
-  border-inline: var(--border);
-}
-@media (width <= 47.99875rem) {
-  .forum-border {
-    border-inline: none;
   }
 }
 .forum-inner {
