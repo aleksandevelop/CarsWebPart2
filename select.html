@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>AutoMarket</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+  <!-- <script src="scripts/noUiSlider1.js" defer></script> -->
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__body">
+      <div class="header__body-inner container">
+        <a class="header__logo logo" href="/">
+          <img
+              src="./images/header/logo.jpg"
+              alt=""
+              width="240"
+              height="70"
+              loading="lazy"
+            />
+        </a>
+        <div class="header__counter counter">
+          <div class="count count-zero"></div>
+          <div class="count count-zero"></div>
+          <div class="count count-zero"></div>
+          <div class="count count-three"></div>
+          <div class="count count-one"></div>
+          <div class="count count-zero"></div>
+          <div class="count count-two"></div>
+          <div class="count count-two"></div>
+        </div>
+        <form action="">
+          <input
+            type="search"
+            class="header__search search"
+            placeholder="Поиск по объявлениям"
+            title="Поиск по объявлениям" />
+        </form>
+        <div class="header__actions">
+          <a class="header__actions--link link" href="/">добавить объявление</a>
+          <ul class="header__actions--list">
+            <li class="header__actions--item">
+              <a href="/" title="избранное">
+                <img
+                    src="./images/header/heart.png"
+                    alt=""
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                  />
+              </a>
+            </li>
+            <li class="header__actions--item">
+              <a href="/" title="искать">
+                <img
+                    src="./images/header/search.png"
+                    alt=""
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                  />
+              </a>
+            </li>
+            <li class="header__actions--item">
+              <a href="/" title="машины">
+                <img
+                    src="./images/header/car.png"
+                    alt=""
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                  />
+              </a>
+            </li>
+            <li class="header__actions--item">
+              <a href="/" title="чат">
+                <img
+                    src="./images/header/comment.png"
+                    alt=""
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                  />
+              </a>
+            </li>
+
+            <li class="header__actions--item">
+              <a href="/" title="профиль">
+                <img
+                    src="./images/header/person.png"
+                    alt=""
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                  />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="header__bottom-inner container">
+        <nav class="header__navigation">
+          <ul class="header__navigation-list">
+            <li class="header__navigation-item">
+              <a
+                class="header__navigation-link is-active"
+                href="/select.html">
+                легковые автомобили
+              </a>
+            </li>
+            <li class="header__navigation-item">
+              <a class="header__navigation-link" href="/"> мототехника </a>
+            </li>
+            <li class="header__navigation-item">
+              <a class="header__navigation-link" href="/"> спецтехника </a>
+            </li>
+            <li class="header__navigation-item">
+              <a class="header__navigation-link" href="/">
+                услуги <span class="hidden-tablet">, сто и магазины</span>
+              </a>
+            </li>
+            <li class="header__navigation-item">
+              <a class="header__navigation-link" href="/">
+                запчасти и аксессуары
+              </a>
+            </li>
+            <li class="header__navigation-item">
+              <a class="header__navigation-link last" href="/"> форум </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__rubric">
+          <ul class="header__rubric-list">
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                BMW(<span class="rubric__count-bmw">48</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Mercedes-Benz(<span class="rubric__count-mercedez">32</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Opel(<span class="rubric__count-opel">14</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Toyota(<span class="rubric__count-toyota">67</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Lexus(<span class="rubric__count-lexus">45</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Daewoo(<span class="rubric__count-daewoo">32</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Hyundai(<span class="rubric__count-hyundai">75</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                ВАЗ(<span class="rubric__count-vaz">23</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Chevrolet(<span class="rubric__count-chevrolet">12</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Hafei(<span class="rubric__count-hafei">10</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Porshe(<span class="rubric__count-porshe">87</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Volkswagen(<span class="rubric__count-volkswagen">63</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Nissan(<span class="rubric__count-nissan">52</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Kia(<span class="rubric__count-kia">63</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Hyundai(<span class="rubric__count-hyundai">75</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                ВАЗ(<span class="rubric__count-vaz">23</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Chevrolet(<span class="rubric__count-chevrolet">12</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Honda(<span class="rubric__count-honda">12</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Mitsubishi(<span class="rubric__count-mitsubishi">51</span>),
+              </a>
+            </li>
+          </ul>
+          <ul aria-hidden="true" class="header__rubric-list">
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                BMW(<span class="rubric__count-bmw">48</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Mercedes-Benz(<span class="rubric__count-mercedez">32</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Opel(<span class="rubric__count-opel">14</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Toyota(<span class="rubric__count-toyota">67</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Lexus(<span class="rubric__count-lexus">45</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Daewoo(<span class="rubric__count-daewoo">32</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Hyundai(<span class="rubric__count-hyundai">75</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                ВАЗ(<span class="rubric__count-vaz">23</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Chevrolet(<span class="rubric__count-chevrolet">12</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Hafei(<span class="rubric__count-hafei">10</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Porshe(<span class="rubric__count-porshe">87</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Volkswagen(<span class="rubric__count-volkswagen">63</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Nissan(<span class="rubric__count-nissan">52</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Kia(<span class="rubric__count-kia">63</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Hyundai(<span class="rubric__count-hyundai">75</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                ВАЗ(<span class="rubric__count-vaz">23</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Chevrolet(<span class="rubric__count-chevrolet">12</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Honda(<span class="rubric__count-honda">12</span>),
+              </a>
+            </li>
+            <li class="header__rubric-item">
+              <a class="header__rubric-link" href="/">
+                Mitsubishi(<span class="rubric__count-mitsubishi">51</span>),
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="forum container">
+      <div class="forum-border">
+        <div class="forum-inner">
+          <h2 class="visually-hidden">Поиск объявлений</h2>
+          <h3 class="forum-title">объявления</h3>
+          <div class="forum-nav">
+            <ul class="forum-list">
+              <li class="forum-item">
+                <a href="/" class="forum-link">Средства</a>
+              </li>
+              <li class="forum-item">
+                <a href="/" class="forum-link">Обман</a>
+              </li>
+              <li class="forum-item">
+                <a href="/" class="forum-link">Музыка</a>
+              </li>
+              <li class="forum-item">
+                <a href="/" class="forum-link">Сколько стоит растаможка</a>
+              </li>
+              <li class="forum-item">
+                <a href="/" class="forum-link">Масло для АКПП</a>
+              </li>
+              <li class="forum-item">
+                <a href="/" class="forum-link">если у вас не хватает</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section container">
+      <div class="section__body">
+        <div class="section__body-inner">
+          <ul class="section__list section__list-reverse">
+            <li class="section__item">
+              <div class="section__top section__top--yellow">
+                <a class="section__top-link" href="/">
+                  <span class="section__top-desc"> Поиск по бренду </span>
+                  <!--                <span>-->
+                  <!--              <svg-->
+                  <!--                width="32"-->
+                  <!--                height="32"-->
+                  <!--                viewBox="0 0 24 24"-->
+                  <!--                fill="none"-->
+                  <!--                xmlns="http://www.w3.org/2000/svg"-->
+                  <!--              >-->
+                  <!--                <path-->
+                  <!--                  d="M13 7L18 12L13 17"-->
+                  <!--                  stroke="currentColor"-->
+                  <!--                  stroke-width="2"-->
+                  <!--                  stroke-linecap="round"-->
+                  <!--                  stroke-linejoin="round"-->
+                  <!--                />-->
+                  <!--                <path-->
+                  <!--                  d="M7 7L12 12L7 17"-->
+                  <!--                  stroke="currentColor"-->
+                  <!--                  stroke-width="2"-->
+                  <!--                  stroke-linecap="round"-->
+                  <!--                  stroke-linejoin="round"-->
+                  <!--                />-->
+                  <!--              </svg>-->
+                  <!--            </span>-->
+                </a>
+              </div>
+              <div class="section__main select">
+                <form
+                  action="/web/20140625111216/http://mashina.tj/cars"
+                  name="search"
+                  method="post"
+                  class="select__form">
+                  <div class="select__radios">
+                    <label class="select__radio"><input
+                        type="radio"
+                        name="status"
+                        value="0"
+                        class="first"
+                        checked="true"
+                        class="select__radio-text" />Все</label>
+                    <label class="select__radio"><input
+                        type="radio"
+                        name="status"
+                        value="1"
+                        class="select__radio-text" />Подержанные</label>
+                    <label class="select__radio"><input
+                        type="radio"
+                        name="status"
+                        value="2"
+                        class="select__radio-text" />Новые</label>
+                  </div>
+                  <div class="select__div">
+                    <div class="select__labels">
+                      <label class="select__label" for="select__label1">Марка:</label>
+                      <label class="select__label" for="select__label2">Модель:</label>
+                    </div>
+                    <div class="select__selects">
+                      <select name="brand" class="select__select" id="select__label1">
+                        <option value="0">Любая</option>
+                        <option value="acura">Acura</option>
+                        <option value="alfa_romeo">Alfa Romeo</option>
+                        <option value="alpina">Alpina</option>
+                        <option value="aro">ARO</option>
+                        <option value="asia">Asia</option>
+                        <option value="aston_martin">Aston Martin</option>
+                        <option value="audi">Audi</option>
+                        <option value="austin">Austin</option>
+                        <option value="bentley">Bentley</option>
+                        <option value="bertone">Bertone</option>
+                        <option value="bmw">BMW</option>
+                        <option value="bugatti">Bugatti</option>
+                        <option value="buick">Buick</option>
+                        <option value="byd">BYD</option>
+                        <option value="cadillac">Cadillac</option>
+                        <option value="chana">Chana</option>
+                        <option value="changan">Changan</option>
+                        <option value="chery">Chery</option>
+                        <option value="chevrolet">Chevrolet</option>
+                        <option value="chrysler">Chrysler</option>
+                        <option value="citroen">Citroen</option>
+                        <option value="dadi">Dadi</option>
+                        <option value="daewoo">Daewoo</option>
+                        <option value="daihatsu">Daihatsu</option>
+                        <option value="datsun">Datsun</option>
+                        <option value="dodge">Dodge</option>
+                        <option value="dong_feng">Dong Feng</option>
+                        <option value="eagle">Eagle</option>
+                        <option value="faw">FAW</option>
+                        <option value="ferrari">Ferrari</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="ford">Ford</option>
+                        <option value="foton">Foton</option>
+                        <option value="geely">Geely</option>
+                        <option value="geo">GEO</option>
+                        <option value="gmc">GMC</option>
+                        <option value="gonow">Gonow</option>
+                        <option value="great_wall">Great Wall</option>
+                        <option value="hafei">Hafei</option>
+                        <option value="hebei_zhongxing">Hebei Zhongxing</option>
+                        <option value="holden">Holden</option>
+                        <option value="honda">Honda</option>
+                        <option value="huanghai">Huanghai</option>
+                        <option value="hummer">Hummer</option>
+                        <option value="hyundai">Hyundai</option>
+                        <option value="infiniti">Infiniti</option>
+                        <option value="iran_khodro">Iran Khodro</option>
+                        <option value="isuzu">Isuzu</option>
+                        <option value="jac">Jac</option>
+                        <option value="jaguar">Jaguar</option>
+                        <option value="jeep">Jeep</option>
+                        <option value="jmc">JMC</option>
+                        <option value="kia">Kia</option>
+                        <option value="lamborghini">Lamborghini</option>
+                        <option value="lancia">Lancia</option>
+                        <option value="land_rover">Land Rover</option>
+                        <option value="lexus">Lexus</option>
+                        <option value="lifan">Lifan</option>
+                        <option value="lincoln">Lincoln</option>
+                        <option value="lotus">Lotus</option>
+                        <option value="luxgen">Luxgen</option>
+                        <option value="mahindra">Mahindra</option>
+                        <option value="maserati">Maserati</option>
+                        <option value="maybach">Maybach</option>
+                        <option value="mazda">Mazda</option>
+                        <option value="mercedes-benz">Mercedes-Benz</option>
+                        <option value="mercury">Mercury</option>
+                        <option value="mini">Mini</option>
+                        <option value="mitsubishi">Mitsubishi</option>
+                        <option value="nissan">Nissan</option>
+                        <option value="oldsmobile">Oldsmobile</option>
+                        <option value="opel">Opel</option>
+                        <option value="peugeot">Peugeot</option>
+                        <option value="plymouth">Plymouth</option>
+                        <option value="pontiac">Pontiac</option>
+                        <option value="porsche">Porsche</option>
+                        <option value="proton">Proton</option>
+                        <option value="renault">Renault</option>
+                        <option value="rolls_royce">Rolls Royce</option>
+                        <option value="rover">Rover</option>
+                        <option value="saab">Saab</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="saturn">Saturn</option>
+                        <option value="sceo">Sceo</option>
+                        <option value="scion">Scion</option>
+                        <option value="seat">Seat</option>
+                        <option value="simca">Simca</option>
+                        <option value="skoda">Skoda</option>
+                        <option value="smart">Smart</option>
+                        <option value="soueast">Soueast</option>
+                        <option value="ssang_yong">Ssang Yong</option>
+                        <option value="subaru">Subaru</option>
+                        <option value="suzuki">Suzuki</option>
+                        <option value="talbot">Talbot</option>
+                        <option value="tatra">Tatra</option>
+                        <option value="tesla">Tesla</option>
+                        <option value="tianma">Tianma</option>
+                        <option value="tianye">Tianye</option>
+                        <option value="tofas">Tofas</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="volkswagen">Volkswagen</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="wartburg">Wartburg</option>
+                        <option value="xinkai">Xinkai</option>
+                        <option value="yugo">Yugo</option>
+                        <option value="yutong">Yutong</option>
+                        <option value="zastava">Zastava</option>
+                        <option value="zhengzhou">Zhengzhou</option>
+                        <option value="zuk">Zuk</option>
+                        <option value="zx">ZX</option>
+                        <option value="vaz">ВАЗ</option>
+                        <option value="vis">ВИС</option>
+                        <option value="gaz">ГАЗ</option>
+                        <option value="zaz">ЗАЗ</option>
+                        <option value="zil">ЗиЛ</option>
+                        <option value="zis">ЗиС</option>
+                        <option value="izh">ИЖ</option>
+                        <option value="luaz">ЛуАЗ</option>
+                        <option value="moskvich">Москвич</option>
+                        <option value="raf">РАФ</option>
+                        <option value="tagaz">ТагАЗ</option>
+                        <option value="uaz">УАЗ</option>
+                      </select>
+                      <select name="model" class="select__select" disabled="" id="select__label">
+                        <option value="0">Любая</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="select__div">
+                    <div class="select__labels">
+                      <label class="select__label" for="select__label3">Объём:</label>
+                      <label class="select__label" for="select__label4">Топливо:</label>
+                    </div>
+                    <div class="select__selects">
+                      <select name="volume" class="select__select" id="select__label3">
+                        <option value="0">Любой</option>
+                        <option value="1">Менее 1 л.</option>
+                        <option value="2">От 1 до 1.5 л.</option>
+                        <option value="3">От 1.5 до 2 л.</option>
+                        <option value="4">От 2 до 3 л.</option>
+                        <option value="5">Более 3 л.</option>
+                      </select>
+                      <select name="fuel" class="select__select" id="select__label4">
+                        <option value="0">Любое</option>
+                        <option value="1">Бензин</option>
+                        <option value="2">Бензин + газ</option>
+                        <option value="3">Газ</option>
+                        <option value="4">Дизель</option>
+                        <option value="5">Гибрид</option>
+                        <option value="6">Электричество</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="select__div">
+                    <div class="select__labels">
+                      <label class="select__label" for="select__label5">КПП:</label>
+                      <label class="select__label" for="select__label6">Привод:</label>
+                    </div>
+                    <div class="select__selects">
+                      <select name="transmission" class="select__select" id="select__label5">
+                        <option value="0">Любая</option>
+                        <option value="1">Механика</option>
+                        <option value="2">Автомат</option>
+                        <option value="4">Вариатор</option>
+                      </select>
+                      <select name="drive" class="select__select" id="select__label6">
+                        <option value="0">Любой</option>
+                        <option value="1">Передний</option>
+                        <option value="2">Задний</option>
+                        <option value="3">Полный</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="select__div">
+                    <div class="select__labels">
+                      <label class="select__label" for="select__label7">Кузов:</label>
+                      <label class="select__label" for="select__label8">Растаможка:</label>
+                    </div>
+                    <div class="select__selects">
+                      <select name="body" class="select__select" id="select__label7">
+                        <option value="0">Любой</option>
+                        <option value="1">Седан</option>
+                        <option value="2">Хэтчбек</option>
+                        <option value="3">Универсал</option>
+                        <option value="4">Внедорожник</option>
+                        <option value="5">Кроссовер</option>
+                        <option value="6">Пикап</option>
+                        <option value="7">Минивен</option>
+                        <option value="8">Фургон</option>
+                        <option value="9">Кабриолет</option>
+                        <option value="10">Купе</option>
+                      </select>
+                      <select name="clearance" class="select__select" id="select__label8">
+                        <option value="0">Не важно</option>
+                        <option value="1">С растаможкой</option>
+                        <option value="2">Без растаможки</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="select__div">
+                    <div class="select__labels select__labels-big">
+                      <label class="select__label" for="select__label9">Региональное местонахождение:</label>
+                    </div>
+                    <div class="select__selects select__selects-big">
+                      <select name="location" class="select__select" id="select__label9">
+                        <option value="0" selected="">Все регионы</option>
+                        <optgroup label="Столица">
+                          <option value="101">Душанбе</option>
+                        </optgroup>
+                        <optgroup label="РРП">
+                          <option value="201">Варзоб</option>
+                          <option value="202">Вахдат</option>
+                          <option value="203">Гиссар</option>
+                          <option value="204">Джиргиталь</option>
+                          <option value="205">Нуробад</option>
+                          <option value="206">Рашт</option>
+                          <option value="207">Рогун</option>
+                          <option value="208">Рудаки</option>
+                          <option value="209">Тавильдара</option>
+                          <option value="210">Таджикобад</option>
+                          <option value="211">Турсунзаде</option>
+                          <option value="212">Файзабад</option>
+                          <option value="213">Шахринав</option>
+                        </optgroup>
+                        <optgroup label="ГБАО">
+                          <option value="301">Вандж</option>
+                          <option value="302">Дарваз</option>
+                          <option value="303">Ишкашим</option>
+                          <option value="304">Мургаб</option>
+                          <option value="305">Рошткала</option>
+                          <option value="306">Рушан</option>
+                          <option value="307">Хорог</option>
+                          <option value="308">Шугнан</option>
+                        </optgroup>
+                        <optgroup label="СОГД">
+                          <option value="401">Айни</option>
+                          <option value="402">Ашт</option>
+                          <option value="403">Бободжан Гафуров</option>
+                          <option value="404">Ганчин</option>
+                          <option value="405">Горная Матча</option>
+                          <option value="406">Джаббор Расулов</option>
+                          <option value="407">Зафарабад</option>
+                          <option value="408">Истаравшан</option>
+                          <option value="409">Истиклол</option>
+                          <option value="410">Исфара</option>
+                          <option value="411">Кайраккум</option>
+                          <option value="412">Канибадам</option>
+                          <option value="413">Матча</option>
+                          <option value="414">Ура-Тюбе</option>
+                          <option value="415">Пенджикент</option>
+                          <option value="416">Спитамен</option>
+                          <option value="417">Табашар</option>
+                          <option value="418">Худжанд</option>
+                          <option value="419">Чкалов</option>
+                          <option value="420">Шахристан</option>
+                        </optgroup>
+                        <optgroup label="ХАТЛОН">
+                          <option value="501">Абдурахмони Джами</option>
+                          <option value="502">Больджуван</option>
+                          <option value="503">Бохтар</option>
+                          <option value="504">Вахш</option>
+                          <option value="505">Восеъ</option>
+                          <option value="506">Дангара</option>
+                          <option value="507">Джалолиддини Руми</option>
+                          <option value="508">Джиликуль</option>
+                          <option value="509">Кубадиян</option>
+                          <option value="510">Куляб</option>
+                          <option value="511">Кумсангир</option>
+                          <option value="512">Курган-Тюбе</option>
+                          <option value="513">Колхозабадский</option>
+                          <option value="514">Муминабад</option>
+                          <option value="515">Насири Хусрав</option>
+                          <option value="516">Нурек</option>
+                          <option value="517">Пархар</option>
+                          <option value="518">Пяндж</option>
+                          <option value="519">Сарбанд</option>
+                          <option value="520">Темурмалик</option>
+                          <option value="521">Фархор</option>
+                          <option value="522">Хамадани</option>
+                          <option value="523">Ховалинг</option>
+                          <option value="524">Хуросон</option>
+                          <option value="525">Шахритус</option>
+                          <option value="526">Шурабад</option>
+                          <option value="527">Яван</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="select__div">
+                    <div class="select__labels select__labels-big">
+                      <label class="select__label" for="select__label10">Год выпуска, от и до:</label>
+                    </div>
+                    <div class="select__pricing select__selects select__selects-big">
+                      <div class="select__price">
+                        <input
+                          type="text"
+                          id="yearfrom"
+                          name="yearfrom"
+                          value="1950"
+                          class="select__price-input" />
+                      </div>
+                      <div class="select__price">
+                        <input
+                          type="text"
+                          id="yearto"
+                          name="yearto"
+                          value="2015"
+                          class="select__price-input" />
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div
+                    class="noUiSlider2 horizontal"
+                    data-mincostvalue="1950"
+                    data-maxcostvalue="2015"
+                    data-yearfrom="1950"
+                    data-yearto="2015">
+                    <a style="left: 0%">
+                      <div></div>
+                    </a><a style="left: 100%">
+                      <div></div>
+                    </a>
+                  </div> -->
+                  <div class="select__div">
+                    <div class="select__labels select__labels-big">
+                      <label class="select__label " for="select__label10">Цена, от и до:</label>
+                    </div>
+                    <div class="select__pricing select__selects select__selects-big">
+                      <div class="select__price">
+                        <input
+                          type="text"
+                          id="minCost"
+                          name="mincost"
+                          value="0"
+                          class="select__price-input"
+                          id="select__label10" />
+                      </div>
+                      <div class="select__price">
+                        <input
+                          type="text"
+                          id="maxCost"
+                          name="maxcost"
+                          value="150000"
+                          class="select__price-input" />
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- <div
+                    class="noUiSlider horizontal"
+                    data-mincostvalue="0"
+                    data-maxcostvalue="150000"
+                    data-mincost="0"
+                    data-maxcost="150000">
+                    <a style="left: 0%">
+                      <div></div>
+                    </a><a style="left: 100%">
+                      <div></div>
+                    </a>
+                  </div> -->
+
+
+                  <div class="select__div select__div-radio">
+                    <div class="select__labels select__labels-radio">
+                      <label class="select__label" for="select__label11">С фотографиями</label>
+                      <label class="select__label" for="select__label12">Продаётся срочно</label>
+                    </div>
+                    <div class="select__inputs">
+                      <input
+                        type="checkbox"
+                        name="photo"
+                        value="1"
+                        class="select__input"
+                        id="select__label11" />
+                      <input
+                        type="checkbox"
+                        name="urgent"
+                        value="1"
+                        class="select__input"
+                        id="select__label12" />
+                    </div>
+                  </div>
+
+
+                  <div class="select__buttons">
+                    <button class="choose-button select__button" type="submit">
+                      <img src="./images/choose/find.png" alt="" width="18" height="18" loading="lazy">
+                        Подобрать
+                    </button>
+                  </div>
+
+                </form>
+              </div>
+            </li>
+            <li class="section__item">
+              <div class="section__top">
+                <a class="section__top-link" href="/select.html">
+                  <span class="section__top-desc"> Подбор авто </span>
+                </a>
+              </div>
+              <div class="section__main cars">
+                <ul class="cars__list">
+                  <li class="cars__item">
+                    <div class="cars__item-img"><img class="cars__image" src="./images/preview/lada2.png" alt="" width="160" height="120" loading="lazy"></div>
+                    <div class="cars__desc">
+                      <div class="cars__desc-top"> 
+                        <div class="cars__desc-title">
+                          <h4 class="cars__title">Toyota 4runner</h4>
+                          <div class="cars__status">меняю</div>
+                        </div>
+                        <div class="cars__overview">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">2014-07</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">90.000 км</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Механика</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">140 лс</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Бензин</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__desc-bottom">
+                        <div class="cars__location">
+                          <p>Местонахождение: г.Казань, Авиастроительный р/н</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cars__price">
+                      <div class="cars__price-top">
+                        <div class="cars__price-title">
+                          <p >1 800 000 Р</p>
+                        </div>
+                        <div class="cars__overwiew">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">29 000$-31 000$</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__price-bottom">
+                        <div class="cars__dealer">
+                          <button class="cars__button">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cars__item">
+                    <div class="cars__item-img"><img class="cars__image" src="./images/preview/lada2.png" alt="" width="160" height="120" loading="lazy"></div>
+                    <div class="cars__desc">
+                      <div class="cars__desc-top"> 
+                        <div class="cars__desc-title">
+                          <h4 class="cars__title">Toyota 4runner</h4>
+                          <div class="cars__status">меняю</div>
+                        </div>
+                        <div class="cars__overview">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">2014-07</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">90.000 км</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Механика</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">140 лс</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Бензин</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__desc-bottom">
+                        <div class="cars__location">
+                          <p>Местонахождение: г.Казань, Авиастроительный р/н</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cars__price">
+                      <div class="cars__price-top">
+                        <div class="cars__price-title">
+                          <p >1 800 000 Р</p>
+                        </div>
+                        <div class="cars__overwiew">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">29 000$-31 000$</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__price-bottom">
+                        <div class="cars__dealer">
+                          <button class="cars__button">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cars__item">
+                    <div class="cars__item-img"><img class="cars__image" src="./images/preview/lada2.png" alt="" width="160" height="120" loading="lazy"></div>
+                    <div class="cars__desc">
+                      <div class="cars__desc-top"> 
+                        <div class="cars__desc-title">
+                          <h4 class="cars__title">Toyota 4runner</h4>
+                          <div class="cars__status">меняю</div>
+                        </div>
+                        <div class="cars__overview">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">2014-07</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">90.000 км</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Механика</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">140 лс</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Бензин</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__desc-bottom">
+                        <div class="cars__location">
+                          <p>Местонахождение: г.Казань, Авиастроительный р/н</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cars__price">
+                      <div class="cars__price-top">
+                        <div class="cars__price-title">
+                          <p >1 800 000 Р</p>
+                        </div>
+                        <div class="cars__overwiew">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">29 000$-31 000$</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__price-bottom">
+                        <div class="cars__dealer">
+                          <button class="cars__button">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cars__item">
+                    <div class="cars__item-img"><img class="cars__image" src="./images/preview/lada2.png" alt="" width="160" height="120" loading="lazy"></div>
+                    <div class="cars__desc">
+                      <div class="cars__desc-top"> 
+                        <div class="cars__desc-title">
+                          <h4 class="cars__title">Toyota 4runner</h4>
+                          <div class="cars__status">меняю</div>
+                        </div>
+                        <div class="cars__overview">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">2014-07</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">90.000 км</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Механика</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">140 лс</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Бензин</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__desc-bottom">
+                        <div class="cars__location">
+                          <p>Местонахождение: г.Казань, Авиастроительный р/н</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cars__price">
+                      <div class="cars__price-top">
+                        <div class="cars__price-title">
+                          <p >1 800 000 Р</p>
+                        </div>
+                        <div class="cars__overwiew">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">29 000$-31 000$</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__price-bottom">
+                        <div class="cars__dealer">
+                          <button class="cars__button">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cars__item">
+                    <div class="cars__item-img"><img class="cars__image" src="./images/preview/lada2.png" alt="" width="160" height="120" loading="lazy"></div>
+                    <div class="cars__desc">
+                      <div class="cars__desc-top"> 
+                        <div class="cars__desc-title">
+                          <h4 class="cars__title">Toyota 4runner</h4>
+                          <div class="cars__status">меняю</div>
+                        </div>
+                        <div class="cars__overview">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">2014-07</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">90.000 км</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Механика</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">140 лс</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Бензин</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__desc-bottom">
+                        <div class="cars__location">
+                          <p>Местонахождение: г.Казань, Авиастроительный р/н</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cars__price">
+                      <div class="cars__price-top">
+                        <div class="cars__price-title">
+                          <p >1 800 000 Р</p>
+                        </div>
+                        <div class="cars__overwiew">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">29 000$-31 000$</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__price-bottom">
+                        <div class="cars__dealer">
+                          <button class="cars__button">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cars__item">
+                    <div class="cars__item-img"><img class="cars__image" src="./images/preview/lada2.png" alt="" width="160" height="120" loading="lazy"></div>
+                    <div class="cars__desc">
+                      <div class="cars__desc-top"> 
+                        <div class="cars__desc-title">
+                          <h4 class="cars__title">Toyota 4runner</h4>
+                          <div class="cars__status">меняю</div>
+                        </div>
+                        <div class="cars__overview">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">2014-07</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">90.000 км</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Механика</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">140 лс</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Бензин</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__desc-bottom">
+                        <div class="cars__location">
+                          <p>Местонахождение: г.Казань, Авиастроительный р/н</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cars__price">
+                      <div class="cars__price-top">
+                        <div class="cars__price-title">
+                          <p >1 800 000 Р</p>
+                        </div>
+                        <div class="cars__overwiew">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">29 000$-31 000$</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__price-bottom">
+                        <div class="cars__dealer">
+                          <button class="cars__button">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cars__item">
+                    <div class="cars__item-img"><img class="cars__image" src="./images/preview/lada2.png" alt="" width="160" height="120" loading="lazy"></div>
+                    <div class="cars__desc">
+                      <div class="cars__desc-top"> 
+                        <div class="cars__desc-title">
+                          <h4 class="cars__title">Toyota 4runner</h4>
+                          <div class="cars__status">меняю</div>
+                        </div>
+                        <div class="cars__overview">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">2014-07</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">90.000 км</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Механика</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">140 лс</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Бензин</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__desc-bottom">
+                        <div class="cars__location">
+                          <p>Местонахождение: г.Казань, Авиастроительный р/н</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cars__price">
+                      <div class="cars__price-top">
+                        <div class="cars__price-title">
+                          <p >1 800 000 Р</p>
+                        </div>
+                        <div class="cars__overwiew">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">29 000$-31 000$</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__price-bottom">
+                        <div class="cars__dealer">
+                          <button class="cars__button">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cars__item">
+                    <div class="cars__item-img"><img class="cars__image" src="./images/preview/lada2.png" alt="" width="160" height="120" loading="lazy"></div>
+                    <div class="cars__desc">
+                      <div class="cars__desc-top"> 
+                        <div class="cars__desc-title">
+                          <h4 class="cars__title">Toyota 4runner</h4>
+                          <div class="cars__status">меняю</div>
+                        </div>
+                        <div class="cars__overview">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">2014-07</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">90.000 км</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Механика</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">140 лс</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Бензин</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__desc-bottom">
+                        <div class="cars__location">
+                          <p>Местонахождение: г.Казань, Авиастроительный р/н</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cars__price">
+                      <div class="cars__price-top">
+                        <div class="cars__price-title">
+                          <p >1 800 000 Р</p>
+                        </div>
+                        <div class="cars__overwiew">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">29 000$-31 000$</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__price-bottom">
+                        <div class="cars__dealer">
+                          <button class="cars__button">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cars__item">
+                    <div class="cars__item-img"><img class="cars__image" src="./images/preview/lada2.png" alt="" width="160" height="120" loading="lazy"></div>
+                    <div class="cars__desc">
+                      <div class="cars__desc-top"> 
+                        <div class="cars__desc-title">
+                          <h4 class="cars__title">Toyota 4runner</h4>
+                          <div class="cars__status">меняю</div>
+                        </div>
+                        <div class="cars__overview">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">2014-07</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">90.000 км</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Механика</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">140 лс</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Бензин</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__desc-bottom">
+                        <div class="cars__location">
+                          <p>Местонахождение: г.Казань, Авиастроительный р/н</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cars__price">
+                      <div class="cars__price-top">
+                        <div class="cars__price-title">
+                          <p >1 800 000 Р</p>
+                        </div>
+                        <div class="cars__overwiew">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">29 000$-31 000$</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__price-bottom">
+                        <div class="cars__dealer">
+                          <button class="cars__button">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cars__item">
+                    <div class="cars__item-img"><img class="cars__image" src="./images/preview/lada2.png" alt="" width="160" height="120" loading="lazy"></div>
+                    <div class="cars__desc">
+                      <div class="cars__desc-top"> 
+                        <div class="cars__desc-title">
+                          <h4 class="cars__title">Toyota 4runner</h4>
+                          <div class="cars__status">меняю</div>
+                        </div>
+                        <div class="cars__overview">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">2014-07</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">90.000 км</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Механика</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">140 лс</li>
+                            <li class="cars__overview-item">|</li>
+                            <li class="cars__overview-item">Бензин</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__desc-bottom">
+                        <div class="cars__location">
+                          <p>Местонахождение: г.Казань, Авиастроительный р/н</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cars__price">
+                      <div class="cars__price-top">
+                        <div class="cars__price-title">
+                          <p >1 800 000 Р</p>
+                        </div>
+                        <div class="cars__overwiew">
+                          <ul class="cars__overview-list" >
+                            <li class="cars__overview-item">29 000$-31 000$</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="cars__price-bottom">
+                        <div class="cars__dealer">
+                          <button class="cars__button">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer container">
+    <div class="footer__top"></div>
+    <div class="footer__main">
+      <ul class="footer__nav">
+        <li>
+          <a class="footer__nav-link" href="/" title="Facebook">
+            <img
+                src="./images/footer/facebook.png"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              />
+          </a>
+        </li>
+        <li class="footer__between">|</li>
+        <li>
+          <a class="footer__nav-link" href="/" title="Facebook">
+            <img
+                src="./images/footer/facebook.png"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              />
+          </a>
+        </li>
+        <li class="footer__between">|</li>
+        <li>
+          <a class="footer__nav-link" href="/" title="Facebook">
+            <img
+                src="./images/footer/facebook.png"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              />
+          </a>
+        </li>
+        <li class="footer__between">|</li>
+        <li>
+          <a class="footer__nav-link" href="/" title="Facebook">
+            <img
+                class="footer__nav-img"
+                src="./images/footer/facebook.png"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              />
+          </a>
+        </li>
+        <li class="footer__between">|</li>
+        <li>
+          <a class="section__top-nav-link" href="/" title="Facebook">
+            <img
+                src="./images/footer/facebook.png"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

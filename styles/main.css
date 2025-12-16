@@ -655,10 +655,13 @@ button[aria-label]::before {
   grid-template-columns: calc(70% - 7.5px) calc(30% - 7.5px);
   gap: 15px;
   padding: 15px;
-  border: 1px solid var(--color-gray);
+  border: var(--border);
 }
 .section__list-big {
   grid-template-columns: 1fr;
+}
+.section__list-reverse {
+  grid-template-columns: calc(30% - 7.5px) calc(70% - 7.5px);
 }
 @media (width <= 63.99875rem) {
   .section__list {
@@ -702,20 +705,12 @@ button[aria-label]::before {
     row-gap: 10px;
   }
 }
-.section__top--dark {
-  color: var(--color-dark);
-}
 .section__top--yellow {
-  color: var(--color-light);
+  color: var(--color-dark);
   background-color: var(--color-accent);
 }
 .section__top--yellow:hover {
   background-color: #ab8e30;
-}
-.section__top--gray {
-  color: var(--color-gray);
-  background-color: var(--color-gray-alt);
-  font-weight: 600;
 }
 .section__top-link {
   background: transparent;
@@ -1263,14 +1258,15 @@ input:checked + .choose-wagon {
 }
 
 .service-title {
-  font-size: 19px;
+  margin-top: 10px;
+  font-size: 17px;
   font-weight: bold;
 }
 .service-title:hover {
   color: var(--color-accent);
 }
 .service-teg {
-  margin-top: 20px;
+  margin-top: 5px;
   font-size: 16px;
   font-weight: 600;
   color: var(--color-accent);
@@ -1367,6 +1363,140 @@ input:checked + .choose-wagon {
 }
 .forum-link:hover {
   color: var(--color-dark);
+}
+
+.select {
+  background-color: #f5f5f5;
+  padding: 15px;
+}
+.select__div {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+}
+.select__div-radio {
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+}
+.select__radios {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+.select__radio {
+  font-size: 15px;
+  white-space: nowrap;
+}
+.select__labels, .select__selects {
+  display: grid;
+  grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+  gap: 10px;
+}
+.select__labels-big, .select__selects-big {
+  grid-template-columns: 1fr;
+}
+.select__labels-radio, .select__selects-radio {
+  display: flex;
+  gap: 1px;
+  flex-direction: column;
+}
+.select__label {
+  color: #555;
+  font-size: 15px;
+}
+.select__select {
+  border: 1px solid #cccccc;
+  background: #fcfcfc;
+  font-size: 14px;
+  padding: 5px;
+  font-weight: 500;
+}
+.select__inputs {
+  display: flex;
+  gap: 1px;
+  flex-direction: column;
+}
+.select__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cars__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cars__item {
+  display: flex;
+  min-height: 140px;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-gray);
+  padding-bottom: 20px;
+}
+.cars__image {
+  max-width: 160px;
+  width: 100%;
+  max-height: 120px;
+  height: 100%;
+}
+.cars__desc {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.cars__desc-top {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cars__desc-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cars__overview-list {
+  background-color: var(--color-gray-alt);
+  padding: 5px;
+  display: flex;
+  gap: 2px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  font-size: 15px;
+  justify-content: space-between;
+  color: #555555;
+}
+.cars__title {
+  font-size: 20px;
+}
+.cars__status {
+  padding: 5px 10px;
+  border: 1px solid var(--color-gray-alt);
+  transition-duration: var(--transition-duration);
+}
+.cars__status:hover {
+  transform: scale(1.1);
+}
+.cars__location {
+  font-size: 14px;
+}
+.cars__price {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.cars__price-title {
+  font-size: 23px;
+  color: var(--color-dark);
+}
+.cars__price-top {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cars__button {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

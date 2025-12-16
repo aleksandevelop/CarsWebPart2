@@ -62,7 +62,8 @@
 .service {
 
   &-title {
-    font-size: 19px;
+    margin-top: 10px;
+    font-size: 17px;
     font-weight: bold;
     &:hover {
       color: var(--color-accent);
@@ -70,7 +71,7 @@
   }
 
   &-teg {
-    margin-top: 20px;
+    margin-top: 5px;
     font-size: 16px;
     font-weight: 600;
     color: var(--color-accent);
