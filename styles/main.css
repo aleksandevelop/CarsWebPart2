@@ -661,7 +661,7 @@ button[aria-label]::before {
   grid-template-columns: 1fr;
 }
 .section__list-reverse {
-  grid-template-columns: calc(30% - 7.5px) calc(70% - 7.5px);
+  grid-template-columns: calc(25% - 7.5px) calc(70% - 7.5px);
 }
 @media (width <= 63.99875rem) {
   .section__list {
@@ -1385,7 +1385,7 @@ input:checked + .choose-wagon {
   gap: 5px;
 }
 .select__radio {
-  font-size: 15px;
+  font-size: 12px;
   white-space: nowrap;
 }
 .select__labels, .select__selects {
